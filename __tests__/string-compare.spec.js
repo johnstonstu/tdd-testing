@@ -27,13 +27,13 @@ describe("stringCompresion", () => {
   });
   describe("When target can be reached with one subtraction", () => {
     it("should return true", () => {
-      const result = stringCompare("pales", "plale");
+      const result = stringCompare("pales", "pale");
       expect(result).toEqual(true);
     });
   });
   describe("When target can be reached with one replace", () => {
     it("should return true", () => {
-      const result = stringCompare("bales", "plale");
+      const result = stringCompare("bales", "pale");
       expect(result).toEqual(true);
     });
   });
