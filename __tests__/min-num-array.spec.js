@@ -13,6 +13,24 @@ describe("stringCompresion", () => {
       expect(result).toEqual("error");
     });
   });
+  describe("when all elements are the same in the array", () => {
+    it("should return error", () => {
+      const result = minNumArr([1, 1, 1]);
+      expect(result).toEqual(2);
+    });
+  });
+  describe("when all elements are the mixed elemtnts in the array", () => {
+    it("should return error", () => {
+      const result = minNumArr([1, "two", 3]);
+      expect(result).toEqual(2);
+    });
+  });
+  describe("when all elements are the negetive in the array", () => {
+    it("should return the first positive integer", () => {
+      const result = minNumArr([-1, -2, -3]);
+      expect(result).toEqual(1);
+    });
+  });
   describe("given an array of n integers", () => {
     it("returns the minimal positive integer (greater than 0) that does not occur in the array", () => {
       const result = minNumArr([1, 3, 6, 4, 1, 2]);
