@@ -22,7 +22,19 @@ describe("stringCompresion", () => {
   describe("when a string is entered", () => {
     it("should find the first unique char", () => {
       const result = uniqueChar("aabcc");
-      expect(result).toEqual("c");
+      expect(result).toEqual("b");
+    });
+  });
+  describe("when a string has no unique chars", () => {
+    it("should be undefined", () => {
+      const result = uniqueChar("aaa");
+      expect(result).toEqual(undefined);
+    });
+  });
+  describe("when a string has a unique letter later in the string", () => {
+    it("should return the first unique char", () => {
+      const result = uniqueChar("frof");
+      expect(result).toEqual("r");
     });
   });
 });
