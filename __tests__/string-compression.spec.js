@@ -37,4 +37,16 @@ describe("stringCompresion", () => {
       expect(result).toEqual("a2b2");
     });
   });
+  describe("when a capital is entered in the string", () => {
+    it("should return error", () => {
+      const result = stringCompression("AAbb");
+      expect(result).toEqual("a2b2");
+    });
+  });
+  describe("when a letter is out of order is entered in the string", () => {
+    it("should return error", () => {
+      const result = stringCompression("aabba");
+      expect(result).toEqual("a3b2");
+    });
+  });
 });
