@@ -1,10 +1,16 @@
 const stringCompression = require("../lib/stringCompression.js");
 
 describe("stringCompresion", () => {
-  describe("when a string is entered", () => {
-    it("should return each letter followed immediately by a number representing the number of occourances in a row", () => {
-      const result = stringCompression("aaabbb");
-      expect(result).toEqual("a3b3");
+  describe("when a parameter is missing", () => {
+    it("should return error", () => {
+      const result = stringCompression();
+      expect(result).toEqual("error");
+    });
+  });
+  describe("when an empty string is entered", () => {
+    it("should return error", () => {
+      const result = stringCompression(" ");
+      expect(result).toEqual("error");
     });
   });
   describe("when an incorrect data type is entered", () => {
@@ -13,10 +19,10 @@ describe("stringCompresion", () => {
       expect(result).toEqual("error");
     });
   });
-  describe("when a parameter is missing", () => {
-    it("should return error", () => {
-      const result = stringCompression();
-      expect(result).toEqual("error");
+  describe("when a string is entered", () => {
+    it("should return each letter followed immediately by a number representing the number of occourances in a row", () => {
+      const result = stringCompression("aaabbb");
+      expect(result).toEqual("a3b3");
     });
   });
   describe("when a number is entered in the string", () => {
@@ -46,7 +52,7 @@ describe("stringCompresion", () => {
   describe("when a letter is out of order is entered in the string", () => {
     it("should return error", () => {
       const result = stringCompression("aabba");
-      expect(result).toEqual("a3b2");
+      expect(result).toEqual("a2b2a1");
     });
   });
 });
