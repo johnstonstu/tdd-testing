@@ -25,4 +25,16 @@ describe("stringCompresion", () => {
       expect(result).toEqual("a2b2");
     });
   });
+  describe("when spacing is entered in the string", () => {
+    it("should return error", () => {
+      const result = stringCompression("aa bb");
+      expect(result).toEqual("a2b2");
+    });
+  });
+  describe("when punctuation is entered in the string", () => {
+    it("should return error", () => {
+      const result = stringCompression("aa-bb");
+      expect(result).toEqual("a2b2");
+    });
+  });
 });
