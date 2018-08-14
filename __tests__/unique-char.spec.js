@@ -10,7 +10,7 @@ describe("stringCompresion", () => {
   describe("when an empty string is entered", () => {
     it("should return error", () => {
       const result = uniqueChar(" ");
-      expect(result).toEqual("error");
+      expect(result).toEqual(" ");
     });
   });
   describe("when a non string is entered", () => {
@@ -35,6 +35,12 @@ describe("stringCompresion", () => {
     it("should return the first unique char", () => {
       const result = uniqueChar("frof");
       expect(result).toEqual("r");
+    });
+  });
+  describe("when a string of unique chars has been entered", () => {
+    it("should return the first unique char", () => {
+      const result = uniqueChar("terfg");
+      expect(result).toEqual("t");
     });
   });
 });
