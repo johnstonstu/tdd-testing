@@ -37,20 +37,10 @@ describe("stringCompresion", () => {
       expect(result).toEqual(5);
     });
   });
-  describe("given an array of large n integers", () => {
+  describe("given an array of n integers", () => {
     it("returns the minimal positive integer (greater than 0) that does not occur in the array", () => {
-      const result = minNumArr([
-        1,
-        2,
-        3,
-        4,
-        11213123,
-        3123123,
-        612312312,
-        434654334,
-        23453453
-      ]);
-      expect(result).toEqual(5);
+      const result = minNumArr([2, 3, 4, 5]);
+      expect(result).toEqual(1);
     });
   });
 });
