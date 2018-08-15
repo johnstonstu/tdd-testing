@@ -7,7 +7,7 @@ describe("Process Data", () => {
   let mockData = [
     {
       name: "Miss Jermain Waters",
-      age: 31,
+      age: 25,
       yearsExperience: 3,
       satisfaction: 2,
       project1: "pass",
@@ -17,7 +17,7 @@ describe("Process Data", () => {
     },
     {
       name: "Juliana Runte",
-      age: 42,
+      age: 24,
       yearsExperience: 3,
       satisfaction: 2,
       project1: "fail",
@@ -27,9 +27,9 @@ describe("Process Data", () => {
     },
     {
       name: "Emmalee Daugherty",
-      age: 25,
+      age: 26,
       yearsExperience: 2,
-      satisfaction: 4,
+      satisfaction: 2,
       project1: "fail",
       project2: "pass",
       project3: "pass",
@@ -60,15 +60,34 @@ describe("Process Data", () => {
         "project4"
       ]);
     });
-    it("should calculate avg satisfaction for for passing students", () => {});
-    it("should calculate avg satisfaction for failing students", () => {});
+    it("should calculate avg satisfaction for for passing students", () => {
+      expect(processedData).toEqual({
+        number: 1,
+        satisfaction: 2
+      });
+    });
+    it("should calculate avg satisfaction for failing students", () => {
+      expect(processedData).toEqual({
+        number: 2,
+        satisfaction: 2
+      });
+    });
   });
 
   describe("experience", () => {
-    it("should return average staisfaction given years of experience", () => {});
+    it("should return average staisfaction given years of experience", () => {
+      expect(processedData.experience[3]).toEqual({
+        satisfaction: 2
+      });
+    });
   });
 
   describe("demographics", () => {
-    it("should return average age and satisfaction", () => {});
+    it("should return average age and satisfaction", () => {
+      expect(processedData.demographics).toEqual({
+        averageAge: 25,
+        averageSatisfaction: 2
+      });
+    });
   });
 });
