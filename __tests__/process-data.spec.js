@@ -43,7 +43,7 @@ describe("Process Data", () => {
 
   describe("shape of processed data", () => {
     it("should generate an obj with 3 keys", () => {
-      expect(Object.keys(processData)).toEqual([
+      expect(Object.keys(processedData)).toEqual([
         "projects",
         "experience",
         "demographics"
@@ -61,7 +61,7 @@ describe("Process Data", () => {
       ]);
     });
     it("should calculate avg satisfaction for for passing students", () => {
-      expect(processedData).toEqual({
+      expect(processedData.projects).toEqual({
         number: 1,
         satisfaction: 2
       });
