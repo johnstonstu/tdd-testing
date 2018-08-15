@@ -1,0 +1,26 @@
+Title:
+Management wants info on the students
+
+Narrative:
+As a Manager I want to be able to search student list,
+customize the results,
+and apply analytics.
+
+Scenarios:
+1)
+A teacher wants to see if a student is currently passing,
+searches student by name,
+sees if passing or failing
+
+2)
+A management wants to compile data of students based on age,
+searches by range of age,
+recieves list of students,
+apply necessary data analytics.
+
+2)
+Sales wants to get overall satisfication of students,
+searches list for satisfication
+recieves satisfaction for all students,
+apply necessary analytics.
+
