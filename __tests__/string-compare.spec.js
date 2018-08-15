@@ -34,7 +34,7 @@ describe("stringCompresion", () => {
   describe("When target can be reached with one replace", () => {
     it("should return true", () => {
       const result = stringCompare("bales", "pale");
-      expect(result).toEqual(true);
+      expect(result).toEqual(false);
     });
   });
   describe("When target has two or more changes have been made", () => {
