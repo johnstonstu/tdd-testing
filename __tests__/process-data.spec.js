@@ -76,7 +76,7 @@ describe("Process Data", () => {
 
   describe("experience", () => {
     it("should return average staisfaction given years of experience", () => {
-      expect(processedData.experience[3]).toEqual({
+      expect(processedData.experience).toEqual({
         satisfaction: 2
       });
     });
