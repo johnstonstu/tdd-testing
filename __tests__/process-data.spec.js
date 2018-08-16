@@ -61,13 +61,13 @@ describe("Process Data", () => {
       ]);
     });
     it("should calculate avg satisfaction for for passing students", () => {
-      expect(processedData.projects).toEqual({
+      expect(processedData.projects.project1.passed).toEqual({
         number: 1,
         satisfaction: 2
       });
     });
     it("should calculate avg satisfaction for failing students", () => {
-      expect(processedData).toEqual({
+      expect(processedData.projects.project1.failed).toEqual({
         number: 2,
         satisfaction: 2
       });
@@ -76,7 +76,7 @@ describe("Process Data", () => {
 
   describe("experience", () => {
     it("should return average staisfaction given years of experience", () => {
-      expect(processedData.experience).toEqual({
+      expect(processedData.experience[3]).toEqual({
         satisfaction: 2
       });
     });
